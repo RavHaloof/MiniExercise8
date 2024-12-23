@@ -16,4 +16,12 @@ const getArticle = async (req, res) => {
     res.json(article);
 };
 
-module.exports = {createArticle, getArticles, getArticle, updateArticle, deleteArticle };
+const updateArticle = async (req, res) => {
+    res.json(await articleService.updateArticle(req.params.id, req.body.title));
+}
+
+const deleteArticle = async (req, res) => {
+    res.json(await articleService.deleteArticle(req.params.id));
+}
+
+module.exports = {createArticle, getArticles, getArticle, updateArticle, deleteArticle};

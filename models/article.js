@@ -11,5 +11,5 @@ const Article = new Schema({
         default: Date.now
         }
     });
-    
-module.exports = mongoose.model('Article', Article);
+
+module.exports = mongoose.model('Article', Article, "articles");
