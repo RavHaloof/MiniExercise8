@@ -1,3 +1,4 @@
+//hi
 const Category = require('../models/category');
 
 const createCategory = async (name, promoted) => {

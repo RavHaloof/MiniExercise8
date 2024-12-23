@@ -22,7 +22,7 @@ const updateArticle = async (id, title) => {
 const deleteArticle = async (id) => {
     const article = await getArticleById(id);
     if (!article) return null;
-    await article.remove();
+    await article.deleteOne();
     return article;
 };
-module.exports = {createArticle, getArticleById, getArticles, updateArticle, deleteArticle }
+module.exports = {createArticle, getArticleById, getArticles, updateArticle, deleteArticle}
